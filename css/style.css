@@ -1,0 +1,164 @@
+﻿* {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+body {
+    background-image: url('../images/bg3.JPG');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 1100px;
+    margin: auto;
+}
+
+.main,
+footer {
+    width: 1100px;
+    margin: auto;
+}
+
+footer {
+    height: 200px;
+    background-color: papayawhip;
+    padding-top: 20px;
+}
+
+#gly03,
+#gly04 {
+    display: none;
+}
+
+.carousel_img {
+    width: 1100px;
+    height: 300px;
+    margin-top: -20px;
+}
+
+ul.nav.navbar-nav li a {
+    color: rgb(51, 122, 183);
+}
+
+ul.dropdown-menu li:hover a {
+    color: rgb(85, 85, 85);
+}
+
+.menu_mini {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.col-md-3 {
+    margin: 15px 0;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.navbar-brand img {
+    margin: -25px -15px;
+}
+
+.social {
+    width: 31px;
+    height: 31px;
+    margin: 10px 5px 10px 0;
+    float: left;
+}
+
+.dropdown-menu>li {
+    margin: -4px 0 -3px 1px;
+    background: #e7e7e7;
+}
+
+.nav-tabs {
+    background: #e7e7e7;
+}
+
+h3 {
+    font-size: 23px;
+    margin-top: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.modal-dialog {
+    width: 500px;
+}
+
+.modal-body {
+    height: 100px;
+}
+
+form {
+    font-size: 18px;
+}
+
+.text-danger {
+    text-align: center;
+    font-weight: bold;
+}
+
+#FormLogin tr,
+#FormLogin td {
+    padding: 5px;
+}
+
+#FormLogin input[type=text],
+center {
+    font-size: 18px;
+}
+
+.modal-footer button[type="submit"] {
+    width: 80px;
+}
+
+button[type="submit"] {
+    background-color: #7EC1EB;
+}
+
+button[type="submit"]:hover {
+    background-color: #F0C2C3;
+}
+
+a {
+    text-decoration: none;
+}
+
+.col-md-4 {
+    font-size: 18px;
+}
+
+.col-md-4 a:hover {
+    color: #F7060A;
+}
+
+.add li a {
+    text-indent: none;
+}
+
+.add li a:hover {
+    color: #F7060A;
+}
+
+.add li {
+    list-style-type: none;
+}

@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tour Nga: Moscow - St. Petersburg</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link type="text/css" href="css/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/script.js"></script>
+    <style>
+        .main{
+            background-color: #dee7ed;
+            margin: 15px 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .text1{
+            font-size: 20px;
+            color: black;
+        }
+        .text2{
+            color:#1176f2;
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!--Menu------------------------------------------------------------------------------------------------------>
+            <nav class="navbar navbar-default" style="width:1100px;height:auto;">
+                <div class="container-fluid">
+                    <!--logo-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="true">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href=""><img src="images/logo.png" /></a>
+                    </div>
+                    <!--end logo-->
+
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html"><b>HOME</b></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><b>TOUR</b><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="TourVietNam.html"><b>VIỆT NAM</b></a></li>
+                                    <li><a href="TourNuocNgoai.html"><b>NƯỚC NGOÀI</b></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="sitemap.html"><b>SITE MAP</b></a></li>
+                            <li><a href="gioithieu.html"><b>GIỚI THIỆU</b></a></li>
+                        </ul>
+                        <form class="navbar-form navbar-left" action="/action_page.php">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" name="search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+							<li id="gly01"><a href="dangky.html"><div class="glyphicon glyphicon-user"></div> Sign Up</a></li>
+							<li id="gly02"><a href="#" data-toggle="modal" data-target="#Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+							<li id="gly03"><a href="#"><div class="glyphicon glyphicon-shopping-cart"></div> Cart</a></li>
+							<li id="gly04" onClick="LogoutF();"><a href="#"><div class="glyphicon glyphicon-log-out"></div> Logout</a></li>
+                    	</ul>
+                    </div>
+                </div>
+            </nav>
+            <!--end menu-------------------------------------------------------------------------------------------------->
+			<div class="modal fade" id="Login" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h2 class="text-danger">ĐĂNG NHẬP</h2>
+						</div>
+						<div class="modal-body">
+							<form id="FormLogin" method="post">
+								<table>
+									<tr>
+										<td><label for="txtUser">UserName: </label></td>
+										<td><input type="text" id="txtUser" placeholder="Tên đăng nhập" size="30" maxlegth="30" onblur="return KiemTraTenDN();" required/><span id="user_error"></span></td>
+									</tr>
+									<tr>
+										<td><label for="txtPass">Password: </label></td>
+										<td><input type="text" id="txtPass" placeholder="Mật khẩu" size="30" maxlegth="30" required/><span id="pass_error"></span></td>
+									</tr>
+								</table>
+								<br/>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<center>
+								<button type="submit" onClick="LoginF();">Login</button>	
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+<!--begin main con-------------------------------------------------------------------------------------------------------------------->
+           <div class="main">
+                 <p style="font-size:38px;color: black;"><b>Nga: Moscow - St. Petersburg</b></p>
+
+                 <p class="text1">Là bắt đầu hành trình khám phá 'Xứ Sở Bạch Dương' xinh đẹp với những điểm đến hấp dẫn trải dài trên khắp đất Nga, từ thủ đô Matxcova tráng lệ, đến thành phố Saint Peterburg cổ kính, tất cả tạo lên một đất nước Nga rất riêng, thu hút hàng triệu lượt khách du lịch mỗi năm. Du Lịch Travel.com.vn luôn tự hào là TOP công ty hàng đầu thị trường, chuyên tổ chức các tour đi Nga với giá cực hấp dẫn. Hãy đặt tour du lịch Nga ngay bây giờ để nhận được những khuyến mại hấp dẫn.</p>  
+
+               <img src="images/Châu Âu/Nga/Nga02.jpeg"  style="width:1080px;height:400px;"/>
+
+                 <div class="row" style="margin-top:10px;">
+                     <div class="col-md-6">
+                         <p style="font-size:28px; color:black;"><b>Điểm nhấn hành trình</b></p>
+                         <p class="text1">Hành trình: Nga: Moscow - St. Petersburg<br/>
+                         Lịch trình: 4 ngày 4 đêm<br/>
+                         Ngày khởi hành: 25,30/10<br/>
+                         Vận chuyển: Máy bay khứ hồi &amp; xe du lịch</p>
+                         <p style="font-size: 28px; color: red;"><b>Giá tour: </b><span style="font-size: 28px;">49,990,000 VNĐ</span></p>
+						 <a href="booktour.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Đặt Tour</a>
+                     </div>
+                     <div class="col-md-6">
+                         <img src="images/Châu Âu/Nga/Nga01.jpg" style="width:525px; height:300px;" />
+                     </div>
+                 </div>
+               <div style="text-align: center;">
+                   <div class="row">
+                       <div class="col-md-1"></div>
+                       <div class="col-md-10">
+                           <h4 style="color: red;">Giới thiệu</h4>
+                           <video width="900" height="400" controls style="border: 1px solid gray">
+                               <source src="video/nn.mp4" type="video/mp4">
+                           </video>
+                       </div>
+                       <div class="col-md-1"></div>
+                   </div>
+               </div>
+				<div>
+					<p style="font-size: 28px;color: black;"><b>Lịch trình</b></p>
+                   <p class="text2">ĐÊM 1 | TP.HCM – MOSCOW</p>
+                   <p class="text1">
+                    <b>Chiều:</b> Trưởng đoàn Travel đón Quý khách tại Ga đi quốc tế của sân bay Tân Sơn Nhất, làm thủ tục xuất cảnh để đáp chuyến bay đi Moscow – Thủ đô của Liên bang Nga (chuyến bay quá cảnh tùy theo hàng không). </p>
+                   <p class="text2">NGÀY 2 | MOSCOW (Ăn trưa, tối)</p>
+                   <p class="text1">
+                       <b>Trưa-chiều:</b> Xe đón và đưa Quý khách khởi hành tham quan thành phố Moscow gồm: chụp hình tại Quảng Trường Đỏ - một địa danh nổi tiếng đã đi vào lịch sử thế giới với những cột mốc không thể quên được, Lăng Lê Nin, Nhà thờ thánh Basil. Xe đưa đoàn lên Đồi Lê Nin. Từ đây, quý khách có thể nhìn thấy Trường Đại học tổng hợp quốc gia Lômônôsốp (MGU) - nơi đã đào tạo rất nhiều cán bộ khoa học của Việt Nam, ngắm sông Matxcơva thơ mộng. Sau bữa trưa, xe đưa đoàn đi tham quan Công viên Chiến Thắng và Bảo tàng chiến tranh.<br/>                      
+                       <b>Tối:</b>  Ăn tối và nhận phòng khách sạn nghỉ ngơi.
+                        Quý khách có thể dạo một vòng quanh thủ đô, thưởng thức các món đặc sản: bún chả cá Lả Vọng, phở Hà Nội, búng thang, bún chả, … 
+                       hoặc thưởng thức café ở phố cổ, Hồ Gươm, tham gia phố đi bộ, chợ đêm, chợ Đồng Xuân, thưởng thức đặc sản và mua quà 
+                       lưu niệm.
+                   </p>
+                   <p class="text2">NGÀY 3 | MOSCOW - ST. PETERSBURG(Ăn sáng, trưa, chiều)</p>
+                   <img src="images/Châu Âu/Nga/Nga05.jpg" style="width:1080px;height:400px;" alt=""/>
+                   <p class="text1">
+                       <b>Sáng:</b> Ăn sáng và trả phòng khách sạn. Quý khách lên tàu khởi hành tới cố đô St. Petersburg.<br/>
+                       <b>Trưa:</b> Đến nơi, đoàn dùng bữa trưa tại nhà hàng địa phương. <br/>
+                       <b>Chiều:</b>  Quý khách tham quan Petrodvorets (Peterhof) - nơi mang nhiều dấu tích lịch sử được ví như Versailles của nước Nga. Tại đây, du khách sẽ dạo bộ trong Vườn thượng uyển và tham quan Cung điện Mùa Hè. Ăn tối và nhận phòng khách sạn nghỉ ngơi.
+                   </p>
+                   <p class="text2">NGÀY 4 | ST. PETERSBURG (Ăn sáng, trưa)</p>
+                   <p class="text1">
+                       <b>Sáng_trưa:</b> Ăn sáng tại khách sạn. Đoàn khởi hành tham quan thành phố gồm Pháo đài Peter, Tượng thánh Paul, các Tượng đài Peter đệ nhất, Nicholas đệ nhất. Đoàn lên thuyền khám phá Sông Nêva và những hệ thống cầu mở (thuyền hoạt động tùy điều kiện thời tiết). <br/>
+					   <b>Tối:</b>Dùng bữa tối với món ăn Nga tại nhà hàng địa phương và thưởng thức những điệu múa dân gian của các cô gái Nga tại Cung điện Nikolaevsky. Quý khách về nghỉ ngơi tại khách sạn.<br/>
+                   </p>
+				   <p class="text2">NGÀY 5 | ST. PETERSBURG - TP.HCM (Ăn sáng)</p>
+                   <p class="text1">
+                       <b>Sáng:</b> Ăn sáng và trả phòng khách sạn. Đoàn khởi hành ra phi trường đón chuyến bay về nước.<br/>
+					   <b>Tối:</b>Tại sân bay Tân Sơn Nhất, sau khi làm thủ tục nhập cảnh, Trưởng đoàn Travel chia tay Quý khách. Kết thúc chuyến tham quan. <br/>
+                   </p>
+               </div>
+
+               <marquee style="height: 30px; color: red;" class="text1"><img src="images/logo.PNG" style="height:30px;"/>&nbsp;<b>Cảm ơn quý khách hàng đã sử dụng dịch vụ của công ty chúng tôi!</b></marquee>
+           </div>
+<!--end main --------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="clearfix"></div>
+
+        <!--footer---------------------------------------------------------------------------------------->
+        <footer style="height:350px;padding-top:20px;">
+            <div class="row">
+				<div class="col-md-4">
+					<h3 style="padding-left:20px;">GIỚI THIỆU</h3>
+					<p style="color:#000000;padding-left:20px;"><i>copyright &copy; 2021-2022</i> <a href="index.html">travel.com.vn</a></p>
+					<p style="color:#000000;padding-left:20px;">Chịu trách nhiệm nội dung:</p>
+					<p style="color:#000000;padding-left:20px;">Ngô Thị Thúy Hằng</p>
+				</div>
+
+                <div class="col-md-4">
+                    <h3>Menu</h3>
+                    <ul class="add">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="TourVietNam.html">Tour Việt Nam</a></li>
+                        <li><a href="TourNuocNgoai.html">Tour nước ngoài</a></li>
+                        <li><a href="sitemap.html">Site map</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h3>Ý KIẾN</h3>
+                    <input type="email" placeholder="Email của bạn" size="25" style="margin: 10px 0;" />
+                    <button type="button" class="btn btn-default btn-sm" style="margin:-3px 0 0 -5px; height:30px; display:inline-block;">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </button>
+                    <h3>MẠNG XÃ HỘI</h3>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/vietravel/" alt="facebook"><img src="images/fb.png" /></a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/vietravel/" alt="instagram"><img src="images/ins.png" /></a>
+                    </div>
+                    <div class="social">
+                        <a href="https://twitter.com/VietravelGroup" alt="twitter"><img src="images/tw.png" /></a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.youtube.com/channel/UCY4diIi4ZvrcZIfpLTTM11g" alt="youtube"><img src="images/yt.png" /></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

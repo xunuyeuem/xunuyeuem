@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Giới thiệu</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <style>
+        .main {
+            background-color: #dee7ed;
+            margin: 15px 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .text1 {
+            font-size: 20px;
+            color: black;
+        }
+
+        .text2 {
+            color: #1176f2;
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!--Menu------------------------------------------------------------------------------------------------------>
+            <nav class="navbar navbar-default" style="width:1100px;height:auto;">
+                <div class="container-fluid">
+                    <!--logo-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="true">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" /></a>
+                    </div>
+                    <!--end logo-->
+
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html"><b>HOME</b></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><b>TOUR</b><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="TourVietNam.html"><b>VIỆT NAM</b></a></li>
+                                    <li><a href="TourNuocNgoai.html"><b>NƯỚC NGOÀI</b></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="sitemap.html"><b>SITE MAP</b></a></li>
+                            <li class="active"><a href="gioithieu.html"><b>GIỚI THIỆU</b></a></li>
+                        </ul>
+                        <form class="navbar-form navbar-left" action="/action_page.php">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" name="search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="dangky.html"><div class="glyphicon glyphicon-user"></div> Sign Up</a></li>
+                            <li id="gly02"><a href="#" data-toggle="modal" data-target="#Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            <li id="gly03"><a href="#"><div class="glyphicon glyphicon-shopping-cart"></div> Cart</a></li>
+                            <li id="gly04" onClick="LogoutF();"><a href="#"><div class="glyphicon glyphicon-log-out"></div> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--end menu------------------------------------------------------------>
+            <div class="modal fade" id="Login" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="text-danger">ĐĂNG NHẬP</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="FormLogin" method="post">
+                                <table>
+                                    <tr>
+                                        <td><label for="txtUser">UserName: </label></td>
+                                        <td><input type="text" id="txtUser" placeholder="Tên đăng nhập" size="30" maxlegth="30" onblur="return KiemTraTenDN();" required /><span id="user_error"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="txtPass">Password: </label></td>
+                                        <td><input type="text" id="txtPass" placeholder="Mật khẩu" size="30" maxlegth="30" required /><span id="pass_error"></span></td>
+                                    </tr>
+                                </table>
+                                <br />
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <center>
+                                <button type="submit" onClick="LoginF();">Login</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <!--begin main con-------------------------------------------------------------------------------------------------------------------->
+            <div class="main">
+                <p style="font-size:36px;color: royalblue; text-align: center;"><b>Giới thiệu chung về Du lịch</b></p>
+
+                <p class="text1">
+                Kính thưa quý khách hàng! </br>
+                Lần đầu tiên, <b>Travel company</b> chúng tôi xin trân trọng kính chào và chúc quý khách hàng sức khỏe và thành đạt!
+                </p>
+
+                <img src="images/gt1.jpg" style="width:1080px;height:400px;" />
+
+                <div class="row" style="margin-top:10px;">
+                    <div class="col-md-6">
+                        <img src="images/gt2.jpg" style="width:510px; height:300px;" />
+                    </div>
+                </div>
+
+                <div>
+                    <p style="font-size: 28px;color: royalblue;"><b>Tổng quan về công ty</b></p>            
+                    <p class="text1">
+                       <p style="font-size: 20px; color: black;"> Cùng với tiến trình hội nhập Tổ chức Thương Mại Thế Giới – WTO và xu hướng toàn cầu hóa hiện nay, <b>TRAVEL COMPANY</b> đã ra đời 
+                    để đáp ứng nhu cầu du lịch đang ngày càng phát triển mạnh. Với một đội ngũ nhân viên yêu nghề, năng động, sáng tạo, có thâm niên và
+                     kinh nghiệm trong ngành trên dưới 5 năm, và một bộ máy tổ chức có phong cách làm việc chuyên nghiệp, hiện đại.</br>
+                            Bên cạnh những chương trình du lịch nước ngoài thường xuyên như :Thái Lan, Singapore, Malaysia, Trung Quốc, Hàn Quốc, Hong Kong,
+                     Campuchia… chúng tôi còn định kỳ tổ chức các chương trình đặc biệt: Ngắm hoa anh đào trên đất Phù Tang Nhật Bản; vòng quanh Châu Âu với<b> Hà Lan – Đưc – Bỉ – Pháp – Áo – Ý</b></br>
+                     Chương trình du lịch trong nước phong phú và đa dạng với các điểm đến như : Nha Trang, Đà Lạt, Phan Thiết, Vũng Tàu… Những tuyến điểm đặc sắc đã và đang thu hút sự quan tâm của du khách trong và ngoài nước.</br>
+                            Sự tin cậy và ủng hộ của quý khách dành cho <b>TRAVEL COMPANY</b> sẽ là nguồn khích lệ lớn lao đối với chúng tôi trong quá trình hội nhập và phát triển.</br>
+                           Trân trọng !
+                       </p>
+                    </p>
+                    
+                </div>
+
+                <marquee style="height: 30px; color: red;" class="text1"><img src="images/logo.PNG" style="height:30px;" />&nbsp;<b>Cảm ơn quý khách hàng đã sử dụng dịch vụ của công ty chúng tôi!</b></marquee>
+            </div>
+            <!--end main --------------------------------------------------------------------------------------------------------------------------------->
+
+            <div class="clearfix"></div>
+
+            <!--footer---------------------------------------------------------------------------------------->
+            <footer style="height:350px;background-color:white;padding-top:20px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 style="padding-left:20px;">GIỚI THIỆU</h3>
+                        <p style="color:#000000;padding-left:20px;"><i>copyright &copy; 2021-2022</i> <a href="index.html">travel.com.vn</a></p>
+                        <p style="color:#000000;padding-left:20px;">Chịu trách nhiệm nội dung:</p>
+						<p style="color:#000000;padding-left:20px;">Ngô Thị Thúy Hằng</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Menu</h3>
+                        <ul class="add">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="TourVietNam.html">Tour Việt Nam</a></li>
+                            <li><a href="TourNuocNgoai.html">Tour nước ngoài</a></li>
+                            <li><a href="sitemap.html">Site map</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Ý KIẾN</h3>
+                        <input type="email" placeholder="Email của bạn" size="25" style="margin: 10px 0;" />
+                        <button type="button" class="btn btn-default btn-sm" style="margin:-3px 0 0 -5px; height:30px; display:inline-block;">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                        </button>
+                        <h3>MẠNG XÃ HỘI</h3>
+
+                        <div class="social">
+                            <a href="https://www.facebook.com/vietravel/" alt="facebook"><img src="images/fb.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.instagram.com/vietravel/" alt="instagram"><img src="images/ins.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://twitter.com/VietravelGroup" alt="twitter"><img src="images/tw.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.youtube.com/channel/UCY4diIi4ZvrcZIfpLTTM11g" alt="youtube"><img src="images/yt.png" /></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </footer>
+
+    </div>
+</body>
+
+</html>

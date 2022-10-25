@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tour Trung (Sài Gòn - Tây Nguyên)</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <style>
+        .main {
+            background-color: #dee7ed;
+            margin: 15px 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .text1 {
+            font-size: 20px;
+            color: black;
+        }
+
+        .text2 {
+            color: #1176f2;
+            font-size: 20px;
+        }
+        #giuavideo{
+            text-align: center;
+        }
+    </style>
+
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!--Menu------------------------------------------------------------------------------------------------------>
+            <nav class="navbar navbar-default" style="width:1100px;height:auto;">
+                <div class="container-fluid">
+                    <!--logo-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="true">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="images/logo.png" /></a>
+                    </div>
+                    <!--end logo-->
+
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html"><b>HOME</b></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><b>TOUR</b><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="TourVietNam.html"><b>VIỆT NAM</b></a></li>
+                                    <li><a href="TourNuocNgoai.html"><b>NƯỚC NGOÀI</b></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="sitemap.html"><b>SITE MAP</b></a></li>
+                            <li><a href="gioithieu.html"><b>GIỚI THIỆU</b></a></li>
+                        </ul>
+                        <form class="navbar-form navbar-left" action="/action_page.php">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" name="search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="dangky.html"><div class="glyphicon glyphicon-user"></div> Sign Up</a></li>
+                            <li id="gly02"><a href="#" data-toggle="modal" data-target="#Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            <li id="gly03"><a href="#"><div class="glyphicon glyphicon-shopping-cart"></div> Cart</a></li>
+                            <li id="gly04" onClick="LogoutF();"><a href="#"><div class="glyphicon glyphicon-log-out"></div> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--end menu-------------------------------------------------------------------------------------------------->
+            <div class="modal fade" id="Login" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="text-danger">ĐĂNG NHẬP</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="FormLogin" method="post">
+                                <table>
+                                    <tr>
+                                        <td><label for="txtUser">UserName: </label></td>
+                                        <td><input type="text" id="txtUser" placeholder="Tên đăng nhập" size="30" maxlegth="30" onblur="return KiemTraTenDN();" required /><span id="user_error"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="txtPass">Password: </label></td>
+                                        <td><input type="text" id="txtPass" placeholder="Mật khẩu" size="30" maxlegth="30" required /><span id="pass_error"></span></td>
+                                    </tr>
+                                </table>
+                                <br />
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <center>
+                                <button type="submit" onClick="LoginF();">Login</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <!--begin main con-------------------------------------------------------------------------------------------------------------------->
+            <div class="main">
+                <p style="font-size:38px;color: black;"><b>Du lịch Buôn Ma Thuột - Làng Cà Phê Trung Nguyên từ Sài Gòn</b></p>
+
+                <p class="text1">Buôn Ma Thuột – thác D’ray nur – Làng Cà Phê Trung Nguyên - Buôn Làng Ê Đê Ako Dhong – Buôn Đôn.
+                    Tham quan Buôn AKô Đhông là một buôn làng của người Ê Đê – buôn làng có lịch sử lâu đời nhất tại Buôn Ma Thuột. nổi tiếng giàu có 
+                    với những nhà ngói khang trang, sang trọng. Dấu vết chế độ mẫu hệ ở nơi đây còn lưu lại qua chiếc thang gỗ bắt lên sàn nhà. Điều đặc biệt là có hai thang để lên nhà, nam giới và khách đi thang trước, thang sau dành cho phụ nữ
+                </p>
+
+                <img src="images/BTN/T2/T_1.jpg" style="width:1080px;height:400px;" />
+
+                <div class="row" style="margin-top:10px;">
+                    <div class="col-md-6">
+                        <p style="font-size:28px; color:black;"><b>Điểm nhấn hành trình</b></p>
+                        <p class="text1">
+                            Hành trình: Buôn Ma Thuột – thác D’ray nur – Làng Cà Phê Trung Nguyên - Buôn Làng Ê Đê Ako Dhong – Buôn Đôn</br>
+                            Lịch trình: 3 ngày 2 đêm</br>
+                            Ngày khởi hành: Thứ 6 hàng tuần vào tháng 7,8 </br>
+                            Vận chuyển: Xe du lịch đời mới.
+                        </p>
+                        <p style="font-size: 28px; color: red;"><b>Giá tour: </b><span style="font-size: 28px;">2,699,000 VNĐ</span></p>
+						 <a href="booktour.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Đặt Tour</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/BTN/T2/T_2.jpg" style="width:525px; height:300px;" />
+                    </div>
+                </div>
+                <!--video------------------------------------------------------------------>
+                <div id="giuavideo">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <h4 style="color: red;">Giới thiệu</h4>
+                            <video width="900" height="400" controls style="border: 1px solid gray">
+                                <source src="video/vm.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <p style="font-size: 28px;color: black;"><b>Lịch trình</b></p>
+                    <p class="text2">NGÀY 1 | TP.HỒ CHÍ MINH – ĐẮK LẮK – BUÔN MA THUỘT (ăn sáng, trưa, chiều)</p>
+                    <p class="text1">
+                        <b>Sáng:</b> Xe và Hướng Dẫn Viên Du Lịch Việt đón Quý khách tại điểm hẹn khởi hành đi du lịch hè Buôn Mê Thuột - Đắk Lắk.
+                         Trên đường, đoàn nghe thuyết minh về các địa danh nổi tiếng đi ngang qua như Đồng Xoài, Sóc Bom Bo, Bù Đăng
+                        </br>
+                        <b>Trưa:</b> Dùng bữa trưa.</br>
+                        Đoàn bắt đầu chuyến du lịch mùa hè Buôn Mê Thuột giá rẻ với hành trình  tham quan thác Đray Nưr.</br>
+                        <b>Chiều:</b> Dùng bữa chiều. Nghỉ đêm tại Buôn Ma Thuột. Quý khách tự do nghỉ ngơi tại khách sạn hoặc khám phá tour Buôn Mê Thuột 
+                        mùa hè với chương trình dạo phố núi, thưởng thức đặc sản “ly cà phê Ban Mê”, mua sắm tại chợ đêm.
+                    </p>
+                    <p class="text2">NGÀY 2 | BUÔN MA THUỘT– BUÔN AKÔ ĐHÔNG – BUÔN ĐÔN (ăn sáng, trưa, chiều)</p>
+                    <p class="text1">
+                        <b>Sáng:</b> Dùng bữa sáng.
+                        Đoàn tiếp tục tour Buôn Mê Thuột mùa hè giá rẻ đến tham quan Làng cà phê Trung Nguyên, nơi trải nghiệm về cà phê và những giá trị của cà phê. </br>
+                        <b>Trưa:</b> Đoàn khởi hành đi Buôn Đôn, dùng cơm trưa. Đoàn tham quan Buôn Ðôn, nơi chung sống của cộng đồng các sắc tộc: Ê Ðê, M’nông, Gia rai, Lào, Thái.</br>
+                        <b>Chiều:</b>Đoàn trở về Buôn Ma Thuột, dùng cơm tối. Nghỉ đêm tại Buôn Ma Thuột.
+                    </p>
+                    <p class="text2">NGÀY 3 | | CHÙA SẮC TỨ KHẢI ĐOAN – BẢO TÀNG DÂN TỘC – TP.HCM (ăn sáng, trưa)</p>
+                    <img src="images/BTN/T2/T_3.jpg" style="width:1080px;height:400px;" />
+                    <p class="text1">
+                        <b>Sáng:</b> Dùng bữa sáng.
+                        Viếng thăm chùa Chùa Khải Đoan (Sắc tứ Khải Đoan tự) - ngôi chùa lớn nhất thành phố Buôn Ma Thuột, Chùa do Đoan Huy hoàng thái hậu mẹ vua Bảo Đại cho xây dựng và Nam Phương Hoàng Hậu 
+                        trực tiếp chịu trách nhiệm quản lý việc thi công.
+                        </br>
+                        <b>Trưa:</b> Dùng cơm trưa.
+                         Đoàn khởi hành về TP.HCM, kết thúc chuyến đi, chia tay đoàn và hẹn gặp lại Quý khách.
+                        </br>
+                    </p>
+                    
+                </div>
+
+                <marquee style="height: 30px; color: red;" class="text1"><img src="images/logo.PNG" style="height:30px;" />&nbsp;<b>Cảm ơn quý khách hàng đã sử dụng dịch vụ của công ty chúng tôi!</b></marquee>
+            </div>
+            <!--end main --------------------------------------------------------------------------------------------------------------------------------->
+
+            <div class="clearfix"></div>
+
+            <!--footer---------------------------------------------------------------------------------------->
+            <footer style="height:350px;background-color:white;padding-top:20px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 style="padding-left:20px;">GIỚI THIỆU</h3>
+                        <p style="color:#000000;padding-left:20px;"><i>copyright &copy; 2021-2022</i> <a href="index.html">travel.com.vn</a></p>
+                        <p style="color:#000000;padding-left:20px;">Chịu trách nhiệm nội dung:</p>
+						<p style="color:#000000;padding-left:20px;">Ngô Thị Thúy Hằng</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Menu</h3>
+                        <ul class="add">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="TourVietNam.html">Tour Việt Nam</a></li>
+                            <li><a href="TourNuocNgoai.html">Tour nước ngoài</a></li>
+                            <li><a href="sitemap.html">Site map</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Ý KIẾN</h3>
+                        <input type="email" placeholder="Email của bạn" size="25" style="margin: 10px 0;" />
+                        <button type="button" class="btn btn-default btn-sm" style="margin:-3px 0 0 -5px; height:30px; display:inline-block;">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                        </button>
+                        <h3>MẠNG XÃ HỘI</h3>
+
+                        <div class="social">
+                            <a href="https://www.facebook.com/vietravel/" alt="facebook"><img src="images/fb.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.instagram.com/vietravel/" alt="instagram"><img src="images/ins.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://twitter.com/VietravelGroup" alt="twitter"><img src="images/tw.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.youtube.com/channel/UCY4diIi4ZvrcZIfpLTTM11g" alt="youtube"><img src="images/yt.png" /></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </footer>
+
+    </div>
+</body>
+
+</html>

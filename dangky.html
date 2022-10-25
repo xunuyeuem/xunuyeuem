@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign up</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <style>
+        .main{
+            background-color:#ede2e2;
+            margin: 15px 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+       
+    </style>
+
+    <script>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!--Menu------------------------------------------------------------------------------------------------------>
+            <nav class="navbar navbar-default" style="width:1100px;height:auto;">
+                <div class="container-fluid">
+                    <!--logo-->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="true">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="images/logo.png" /></a>
+                    </div>
+                    <!--end logo-->
+
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html"><b>HOME</b></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><b>TOUR</b><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="TourVietNam.html"><b>VIỆT NAM</b></a></li>
+                                    <li><a href="TourNuocNgoai.html"><b>NƯỚC NGOÀI</b></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="sitemap.html"><b>SITE MAP</b></a></li>
+                            <li><a href="gioithieu.html"><b>GIỚI THIỆU</b></a></li>
+                        </ul>
+                        <form class="navbar-form navbar-left" action="/action_page.php">
+                            <div class="form-group"></div>
+                                <input type="text" class="form-control" placeholder="Search" name="search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><div class="glyphicon glyphicon-user"></div> Sign Up</a></li>
+                            <li id="gly02"><a href="#" data-toggle="modal" data-target="#Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            <li id="gly03"><a href="#"><div class="glyphicon glyphicon-shopping-cart"></div> Cart</a></li>
+                            <li id="gly04" onClick="LogoutF();"><a href="#"><div class="glyphicon glyphicon-log-out"></div> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--end menu-------------------------------------------------------------------------------------------------->
+            <div class="modal fade" id="Login" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="text-danger">ĐĂNG NHẬP</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="FormLogin" method="post">
+                                <table>
+                                    <tr>
+                                        <td><label for="txtUser">UserName: </label></td>
+                                        <td><input type="text" id="txtUser" placeholder="Tên đăng nhập" size="30" maxlegth="30" onblur="return KiemTraTenDN();" required /><span id="user_error"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="txtPass">Password: </label></td>
+                                        <td><input type="password" id="txtPass" placeholder="Mật khẩu" size="30" maxlegth="30" required /><span id="pass_error"></span></td>
+                                    </tr>
+                                </table>
+                                <br />
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <center>
+                                <button type="submit" onClick="LoginF();">Login</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <!--begin form-------------------------------------------------------------------------------------------------------------------->
+       <div class="main">     
+                        <div class="row">
+                            <div class="col-xs-12  col-md-12" style="border:1px solid #808080;height:auto;background-color:aliceblue;">
+                                <h2 class="text-danger">ĐĂNG KÝ TÀI KHOẢN</h2>
+                                <form>
+                                    <div class="form-group">
+                                        <div id="thongbao" class="text-danger" style="text-align:center"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="label-control col-xs-4 col-md-4">Tên đăng nhập</label>
+                                        <div class="col-xs-8 col-md-8">
+                                            <input type="text" id="txtname" placeholder="Name" class="form-control" onblur="ktten()" />
+                                            <span id="ername" class="text-danger">(*)</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label-control  col-xs-4 col-md-4">Mật khẩu</label>
+                                        <div class="col-xs-8 col-md-8">
+                                            <input type="password" id="txtmk" placeholder="Mật khẩu" class="form-control" onblur="ktmk()" />
+                                            <span id="ermk" class="text-danger">(*)</span>
+                                
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label-control  col-xs-4 col-md-4">Nhập lại Mật khẩu</label>
+                                        <div class="col-xs-8 col-md-8">
+                                            <input type="password" id="txtmk2" placeholder="Nhập lại mật khẩu" class="form-control" onblur="ktmklai()" />
+                                            <span id="tbmk2" class="text-danger">(*)</span>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-danger">THÔNG TIN CÁ NHÂN</h2>
+                                    <div class="form-group">
+                                        <label class="label-control col-xs-4 col-md-4">Họ và tên</label>
+                                        <div class="col-xs-8 col-md-8">
+                                            <input type="text" id="txthoten" placeholder="họ tên" class="form-control" onblur="kthoten()" />
+                                            <span id="tbhoten" class="text-danger">(*)</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label-control  col-xs-4 col-md-4">Giới tính</label>
+                                        <div>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="gt" value="Nam" />Nam
+                                        </label>
+                                       
+                                            <label class="radio-inline">
+                                                <input type="radio" name="gt" value="Nu" />Nữ
+                                            </label>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label-control col-xs-4 col-md-4">Ngày sinh</label>
+                                        <div class="col-xs-8 col-md-8">
+                                            <input type="date" id="txtdate" class="form-control" onblur="ktngaysinh()" />
+                                            <span id="erdate" class="text-danger">(*)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="label-control col-xs-4 col-md-4">Địa chỉ</label>
+                                        <div class="col-xs-8 col-md-8">
+                                            <input type="text" id="txtdiachi" placeholder="" class="form-control" onblur="ktdiachi()" />
+                                            <span id="tbdiachi" class="text-danger">(*)</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label-control col-xs-4 col-md-4">Điện thoại</label>
+                                        <div class="col-xs-8 col-md-8">
+                                            <input type="text" id="txtphone" placeholder="" class="form-control" onblur="ktsdt()"/>
+                                            <span id="tbphone" class="text-danger">(*)</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="label-control col-xs-4 col-md-4">Email</label>
+                                        <div class="col-xs-8 col-md-8">
+                                            <input type="text" id="txtemail" placeholder="" class="form-control" onblur="ktemail()"/>
+                                            <span id="tbemail" class="text-danger">(*)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="label-control  col-xs-6 col-md-6">&nbsp;</label>
+                                        <div class="col-xs-6 col-md-6">
+                                            <input type="button" class="btn btn-success" value="Đăng Ký" onclick="save()"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+              </div>          
+            <!--end form--------------------------------------------------------------------------------------------------------------------------------->
+
+            <div class="clearfix"></div>
+
+            <!--footer---------------------------------------------------------------------------------------->
+            <footer style="height:350px;background-color:white;padding-top:20px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 style="padding-left:20px;">GIỚI THIỆU</h3>
+                        <p style="color:#000000;padding-left:20px;"><i>copyright &copy; 2021-2022</i> <a href="index.html">travel.com.vn</a></p>
+                        <p style="color:#000000;padding-left:20px;">Chịu trách nhiệm nội dung:</p>
+						<p style="color:#000000;padding-left:20px;">Ngô Thị Thúy Hằng</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Menu</h3>
+                        <ul class="add">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="TourVietNam.html">Tour Việt Nam</a></li>
+                            <li><a href="TourNuocNgoai.html">Tour nước ngoài</a></li>
+                            <li><a href="sitemap.html">Site map</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Ý KIẾN</h3>
+                        <input type="email" placeholder="Email của bạn" size="25" style="margin: 10px 0;" />
+                        <button type="button" class="btn btn-default btn-sm" style="margin:-3px 0 0 -5px; height:30px; display:inline-block;">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                        </button>
+                        <h3>MẠNG XÃ HỘI</h3>
+
+                        <div class="social">
+                            <a href="https://www.facebook.com/vietravel/" alt="facebook"><img src="images/fb.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.instagram.com/vietravel/" alt="instagram"><img src="images/ins.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://twitter.com/VietravelGroup" alt="twitter"><img src="images/tw.png" /></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.youtube.com/channel/UCY4diIi4ZvrcZIfpLTTM11g" alt="youtube"><img src="images/yt.png" /></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </footer>
+
+    </div>
+</body>
+
+</html>

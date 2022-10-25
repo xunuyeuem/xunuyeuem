@@ -1,0 +1,540 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travel.com.vn</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>     
+    <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <!--Menu------------------------------------------------------------------------------------------------------>
+        <nav class="navbar navbar-default" style="width:1100px;height:auto;">
+            <div class="container-fluid">
+                <!--logo-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="true">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" /></a>
+                </div>
+                <!--end logo-->
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#"><b>HOME</b></a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown"><b>TOUR</b><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="TourVietNam.html"><b>VIỆT NAM</b></a></li>
+                                <li><a href="TourNuocNgoai.html"><b>NƯỚC NGOÀI</b></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sitemap.html"><b>SITE MAP</b></a></li>
+                        <li><a href="gioithieu.html"><b>GIỚI THIỆU</b></a></li>
+                    </ul>
+                    <form class="navbar-form navbar-left" action="/action_page.php">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" name="search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="dangky.html" ><div class="glyphicon glyphicon-user"></div> Sign Up</a></li>
+                        <li id="gly02"><a href="#" data-toggle="modal" data-target="#Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li id="gly03"><a href="#"><div class="glyphicon glyphicon-shopping-cart"></div> Cart</a></li>
+                        <li id="gly04" onClick="LogoutF();"><a href="#"><div class="glyphicon glyphicon-log-out"></div> Logout</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--end menu-------------------------------------------------------------------------------------------------->
+        <div class="modal fade" id="Login" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="text-danger">ĐĂNG NHẬP</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form id="FormLogin" method="post">
+                            <table>
+                                <tr>
+                                    <td><label for="txtUser">UserName: </label></td>
+                                    <td><input type="text" id="txtUser" placeholder="Tên đăng nhập" size="30" maxlegth="30" onblur="return KiemTraTenDN();" required /><span id="user_error"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="txtPass">Password: </label></td>
+                                    <td><input type="text" id="txtPass" placeholder="Mật khẩu" size="30" maxlegth="30" required /><span id="pass_error"></span></td>
+                                </tr>
+                            </table>
+                            <br />
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <center>
+                            <button type="submit" onClick="LoginF();">Login</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <!--carousel ------------------------------------------------------------------------------------------------->
+        <div class="carousel_img">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -------------------------------------------------------------------------------->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides ------------------------------------------------------------------------>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/slide01.jpg" alt="" style="width:1100px;height:350px;" />
+                    </div>
+                    <div class="item">
+                        <img src="images/slide02.jpg" alt="" style="width:1100px;height:350px;" />
+                    </div>
+                    <div class="item">
+                        <img src="images/slide03.jpg" alt="" style="width:1100px;height:350px;" />
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!--end carousel--------------------------------------------------------------------------------------------->
+    </header>
+
+    <div class="main">
+        <!--menu mini------------------------------------------------------------------------------------------------->
+        <div class="menu_mini">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#news"><b>Tour mới</b></a></li>
+                <li><a data-toggle="tab" href="#menu1"><b>Bắc</b></a></li>
+                <li><a data-toggle="tab" href="#menu2"><b>Trung</b></a></li>
+                <li><a data-toggle="tab" href="#menu3"><b>Nam</b></a></li>
+                <li><a data-toggle="tab" href="#menu4"><b>Châu Á</b></a></li>
+                <li><a data-toggle="tab" href="#menu5"><b>Châu Âu</b></a></li>
+            </ul>
+
+            <!--ND tab content -->
+            <div class="tab-content">
+                
+    <!--TOUR NEWS------------------------------------------------------------------------------->
+         <div id="news" class="tab-pane fade in active">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="gallery">
+                         <a target="_blank" href="hanquoc.html">
+                             <img src="images/Châu Á/Hàn Quốc/dao_nami.jpg" alt="">
+                         </a>
+                         <div class="desc">
+                             Hàn Quốc - Đảo Nami - Tháp Namsan - 4N4Đ
+                             <br /><b>Giá: 14,999,000 VNĐ</b>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-md-3 col-sm-6 col-sx-6">
+                     <div class="gallery">
+                         <a target="_blank" href="phap.html">
+                             <img src="images/Châu Âu/Pháp/phap02.png" alt="">
+                         </a>
+                         <div class="desc">
+                             Pháp - Thụy Sĩ - Ý <br /> 5N5Đ
+                             <br /><b>Giá: 40,990,000 VNĐ</b>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-md-3 col-sm-6 col-sx-6">
+                     <div class="gallery">
+                         <a target="_blank" href="Trung2.html">
+                             <img src="images/BTN/T1/T_2.jpg" style="width:250px; height:170px">
+                         </a>
+                         <div class="desc">
+                             Phan Thiết - Hòn Rơm - Mũi Né - 5N5Đ
+                             <br /><b>Giá: 1,499,000 VNĐ</b>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-md-3 col-sm-6 col-sx-4">
+                     <div class="gallery">
+                         <a target="_blank" href="Trung2.html">
+                             <img src="images/BTN/T2/T_1.jpg" style="width:250px; height:170px">
+                         </a>
+                         <div class="desc">
+                             Buôn Ma Thuộc - Trung Nguyên - 3N2Đ
+                             <br /><b>Giá: 2,699,000 VNĐ </b>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+      <!-------------------------------------------------------------------------------------------------------->
+             <div class="row">    
+                 <div class="col-md-3 col-sm-6 col-sx-4">
+                     <div class="gallery">
+                         <a target="_blank" href="nga.html">
+                             <img src="images/Châu Âu/Nga/Nga04.jpg" alt="">
+                         </a>
+                         <div class="desc">
+                             Nga: Moscow - St. Petersburg - 4N4Đ
+                             <br /><b>Giá: 49,990,000 VNĐ </b>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-md-3 col-sm-6 col-sx-4">
+                     <div class="gallery">
+                         <a target="_blank" href="phap.html">
+                             <img src="images/Châu Âu/Pháp/phap01.png" alt="">
+                         </a>
+                         <div class="desc">
+                             Pháp - Thụy Sĩ - Ý <br /> 5N5Đ
+                             <br /><b>Giá: 40,990,000 VNĐ</b>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-md-3 col-sm-6 col-sx-4">
+                     <div class="gallery">
+                         <a target="_blank" href="Bac1.html">
+                             <img src="images/BTN/B1/B_4.png" style="width:250px; height:170px">
+                         </a>
+                         <div class="desc">
+                             Hà Nội - Lào Cai </br> 4N3Đ
+                             <br /><b>Giá: 6,599,000 VNĐ</b>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-md-3">
+                     <div class="gallery">
+                         <a target="_blank" href="Nam1.html">
+                             <img src="images/BTN/N1/N_2.jpg" style="width:250px; height:170px">
+                         </a>
+                         <div class="desc">
+                             Đảo Nam Du </br> 2N2Đ
+                             <br /><b>Giá: 2,299,000 VNĐ</b>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+      </div>
+
+    <!--Bắc --------------------------------------------------------------------------------------------------------------->
+                <div id="menu1" class="tab-pane fade">
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="Bac1.html">
+                                <img src="images/BTN/B1/B_1.jpg"  style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Hà Nội - Hạ Long
+                                <br /><b>Giá: 6,599,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="Bac1.html">
+                                <img src="images/BTN/B2/B_1.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Tây Bắc - Mộc Châu
+                                <br /><b>Giá: 5,990,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="Bac1.html">
+                                <img src="images/BTN/B1/B_2.jpg" style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Hà Nội - Sapa
+                                <br /><b>Giá: 6,599,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="Bac1.html">
+                                <img src="images/BTN/B2/B_3.jpg" style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Mai Châu - Mộc Châu
+                                <br /><b>Giá: 5,990,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <!--Trung --------------------------------------------------------------------------------------------------------------->
+            <div id="menu2" class="tab-pane fade">
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="Trung2.html">
+                                <img src="images/BTN/T1/T_1.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Phan Thiết - Mũi Né
+                                <br /><b>Giá: 1,499,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="Trung2.html">
+                                <img src="images/BTN/T2/T_1.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Đắk Lắc - Buôn Ma Thuộc
+                                <br /><b>Giá: 2,699,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-3">
+                    <div class="gallery">
+                        <a target="_blank" href="Trung2.html">
+                            <img src="images/BTN/T1/T_2.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                        </a>
+                        <div class="desc">
+                            Hòn Rơm - Mũi Né
+                            <br /><b>Giá: 1,499,000 VNĐ</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="gallery">
+                        <a target="_blank" href="Trung2.html">
+                            <img src="images/BTN/T2/T_2.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                        </a>
+                        <div class="desc">
+                            Tây Nguyên - Buôn Đôn
+                            <br /><b>Giá: 2,699,000 VNĐ</b>
+                        </div>
+                    </div>
+                </div>
+           </div>
+
+    <!--Nam --------------------------------------------------------------------------------------------------------------->
+          <div id="menu3" class="tab-pane fade">
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="Nam1.html">
+                                <img src="images/BTN/N1/N_1.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Đảo Nam Du
+                                <br /><b>Giá: 2,299,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="Nam1.html">
+                                <img src="images/BTN/N2/N_1.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Đảo Phú Quốc
+                                <br /><b>Giá: 3,199,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+              <div class="col-md-3">
+                  <div class="gallery">
+                      <a target="_blank" href="Nam1.html">
+                          <img src="images/BTN/N1/N_2.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                      </a>
+                      <div class="desc">
+                          Rạch Giá - Nam Du
+                          <br /><b>Giá: 2,299,000 VNĐ</b>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="gallery">
+                      <a target="_blank" href="Nam1.html">
+                          <img src="images/BTN/N2/N_2.jpg" alt="Cinque Terre" style="width:243px; height:150px">
+                      </a>
+                      <div class="desc">
+                          Phú Quốc - SAFARI
+                          <br /><b>Giá: 3,199,000 VNĐ</b>
+                      </div>
+                  </div>
+              </div>
+           </div>
+
+    <!--Châu Á --------------------------------------------------------------------------------------------------------------->
+           <div id="menu4" class="tab-pane fade">
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="hanquoc.html">
+                                <img src="images/Châu Á/Hàn Quốc/lang-Hanok-Bukchon.jpg"  style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Hàn Quốc
+                                <br /><b>Giá: 14,999,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="hanquoc.html">
+                                <img src="images/Châu Á/Hàn Quốc/dao_nami.jpg"  style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Đảo Nami
+                                <br /><b>Giá: 15,000,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+               <div class="col-md-3">
+                   <div class="gallery">
+                       <a target="_blank" href="hanquoc.html">
+                           <img src="images/Châu Á/Hàn Quốc/cungdien.jpg" style="width:243px; height:150px">
+                       </a>
+                       <div class="desc">
+                           Đảo Nami - Tháp Namsan
+                           <br /><b>Giá: 13,990,000 VNĐ</b>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-3">
+                   <div class="gallery">
+                       <a target="_blank" href="hanquoc.html">
+                           <img src="images/Châu Á/Hàn Quốc/gangnam.jpg" style="width:243px; height:150px">
+                       </a>
+                       <div class="desc">
+                           Phố GangNam
+                           <br /><b>Giá: 14,000,000 VNĐ</b>
+                       </div>
+                   </div>
+               </div>
+         </div>
+
+    <!--Châu Âu --------------------------------------------------------------------------------------------------------------->
+       <div id="menu5" class="tab-pane fade">
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="nga.html">
+                                <img src="images/Châu Âu/Nga/Nga02.jpeg"  style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Moscow
+                                <br /><b>Giá: 49,990,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="gallery">
+                            <a target="_blank" href="phap.html">
+                                <img src="images/Châu Âu/Pháp/phap02.png" style="width:243px; height:150px">
+                            </a>
+                            <div class="desc">
+                                Pháp - Thụy Sĩ
+                                <br /><b>Giá: 40,990,000 VNĐ</b>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="col-md-3">
+                    <div class="gallery">
+                        <a target="_blank" href="nga.html">
+                            <img src="images/Châu Âu/Nga/Nga05.jpg" style="width:243px; height:150px">
+                        </a>
+                        <div class="desc">
+                           Nga - St.Petersburg
+                            <br /><b>Giá: 48,000,000 VNĐ</b>
+                        </div>
+                    </div>
+                </div>
+           <div class="col-md-3">
+               <div class="gallery">
+                   <a target="_blank" href="phap.html">
+                       <img src="images/Châu Âu/Pháp/phap01.png" style="width:243px; height:150px">
+                   </a>
+                   <div class="desc">
+                       Pháp - Ý
+                       <br /><b>Giá: 42,000,000 VNĐ</b>
+                   </div>
+               </div>
+           </div>
+
+  </div>
+        <!--end main------------------------------------------------------------------------------------------>      
+    </div>   
+    <div class="clearfix" ></div>
+
+    <!--footer---------------------------------------------------------------------------------------->
+    <footer style="height:350px;background-color:white;padding-top:20px;">
+        <div class="row">
+			<div class="col-md-4">
+				<h3 style="padding-left:20px;">GIỚI THIỆU</h3>
+				<p style="color:#000000;padding-left:20px;"><i>copyright &copy; 2021-2022</i> <a href="index.html">travel.com.vn</a></p>
+				<p style="color:#000000;padding-left:20px;">Chịu trách nhiệm nội dung:</p>
+				<p style="color:#000000;padding-left:20px;">Ngô Thị Thúy Hằng</p>
+			</div>
+
+            <div class="col-md-4">
+                <h3>Menu</h3>
+                <ul class="add">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="TourVietNam.html">Tour Việt Nam</a></li>
+                    <li><a href="TourNuocNgoai.html">Tour nước ngoài</a></li>
+                    <li><a href="sitemap.html">Site map</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Ý KIẾN</h3>
+                <input type="email" placeholder="Email của bạn" size="25" style="margin: 10px 0;"/>
+                <button type="button" class="btn btn-default btn-sm" style="margin:-3px 0 0 -5px; height:30px; display:inline-block;">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                </button>
+                <h3>MẠNG XÃ HỘI</h3>
+                
+                <div class="social">
+                    <a href="https://www.facebook.com/vietravel/" alt="facebook"><img src="images/fb.png" /></a>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/vietravel/" alt="instagram"><img src="images/ins.png" /></a>
+                </div>
+                <div class="social">
+                    <a href="https://twitter.com/VietravelGroup" alt="twitter"><img src="images/tw.png" /></a>      
+                </div>
+                <div class="social">
+                    <a href="https://www.youtube.com/channel/UCY4diIi4ZvrcZIfpLTTM11g" alt="youtube"><img src="images/yt.png" /></a>    
+                </div>
+               
+            </div>
+
+        </div>
+    </footer>
+
+</div>
+</body>
+
+</html>
